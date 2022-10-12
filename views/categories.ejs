@@ -1,0 +1,33 @@
+<h1>ALL CATEGORIES</h1>
+
+
+<div class="categories">
+    <%if(typeof categories !== 'undefined' && categories.length > 0){ %>
+        <% categories.forEach((category)=>{ %>
+    <a href="/categories/<%=category.name%>" class="category_link">
+       <div class="category_img">
+           <img src="imgs/<%-category.image%>" alt="<%=category.name%>">
+       </div>
+       <div class="category_name"><%=category.name%></div>
+    </a>
+      <%})%>
+    <%}%>
+</div>
+
+
+<!-- 
+i moved this to a new route -->
+    <!-- <div class="latest_recipe">
+           <%if(typeof categoryRecipes !== 'undefined' && categoryRecipes.length > 0){%>
+            <%categoryRecipes.forEach((recipe)=>{%>
+           <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+            <div class="latest_recipe_img">
+                <img src="/imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+            </div>
+            <div class="latest_recipe_name"><%=recipe.name%></div>
+         </a>
+           <%})%>
+          <%} else{%>
+            <p>No Recipes</p>
+         <%}%>
+          </div> -->

@@ -1,0 +1,14 @@
+<div class="latest_recipe">
+    <%if(typeof categoryRecipes !== 'undefined' && categoryRecipes.length > 0){%>
+     <%categoryRecipes.forEach((recipe)=>{%>
+    <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+     <div class="latest_recipe_img">
+         <img src="/imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+     </div>
+     <div class="latest_recipe_name"><%=recipe.name%></div>
+  </a>
+    <%})%>
+   <%} else{%>
+     <p>No Recipes</p>
+  <%}%>
+   </div>

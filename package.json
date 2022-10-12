@@ -1,0 +1,23 @@
+{
+  "name": "nero_blog_website",
+  "version": "1.0.0",
+  "description": "Website to teach my students at afriportal",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oghenero Okerri",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.6.0"
+  }
+}

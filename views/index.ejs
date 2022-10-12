@@ -1,0 +1,193 @@
+<!--Intro Section-->
+<section id="intro">
+    <div class="intro">
+        <div class="intro-text">
+            <h1>Varieties of Delicious Nigerian Meals.</h1>
+             <h2>Let Us Show You The Secret!</h2>
+           
+           <div class="dish-btns">
+            <button id="btn1"><a href="/categories">All Categories</a></button>
+            <button id="btn1"><a href="/recipes">All Recipes</a></button>
+           </div>
+        </div>
+        <div class="hero-img">
+             <img src="/imgs/food14.jpg" alt="hero-image" width="400px" height="300px">
+        </div>
+    </div>
+</section>
+<!--Intro Section ends-->
+
+<!--Categories Section-->
+  <section id="categories">
+    <div class="categories_text">
+        <h3>Categories</h3>
+        <a href="/categories">View more</a>
+   </div>
+    <div class="categories">
+        <%if(categories.length > 0){ %>
+            <% categories.forEach((category)=>{ %>
+        <a href="/categories/<%=category.name%>" class="category_link">
+           <div class="category_img">
+               <img src="imgs/<%=category.image%>" alt="<%=category.name%>">
+           </div>
+           <div class="category_name"><%=category.name%></div>
+        </a>
+          <%})%>
+        <%} else{%>
+            <p>No categories</p>
+         <%}%>
+    </div>
+  
+  </section>
+<!--Categories Section Ends-->
+  
+<!--Latest Section starts-->
+     <section id="latest_recipe">
+            <div class="latest_recipie_text">
+                <h3>Latest Recipie</h3>
+                <a href="/recipes">View more</a>
+           </div>
+        <div class="latest_recipe">
+           <%if(latest.length > 0){%>
+            <%latest.forEach((recipe)=>{%>
+           <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+            <div class="latest_recipe_img">
+                <img src="imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+            </div>
+            <div class="latest_recipe_name"><%=recipe.name%></div>
+         </a>
+           <%})%>
+          <%} else{%>
+            <p>No Recipes</p>
+         <%}%>
+          </div>
+     </section>
+<!--Latest Ends-->
+
+<!--Soup recipe-->
+<section id="latest_recipe">
+    <div class="latest_recipie_text">
+        <h3>Soup Recipies</h3>
+        <a href="/categories/SOUP">View more</a>
+   </div>
+<div class="latest_recipe">
+   <%if(soup.length > 0){%>
+    <%soup.forEach((recipe)=>{%>
+   <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+    <div class="latest_recipe_img">
+        <img src="imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+    </div>
+    <div class="latest_recipe_name"><%=recipe.name%></div>
+ </a>
+   <%})%>
+  <%}else{%>
+    <p>No recipes</p>
+ <%}%>
+  </div>
+</section>
+<!--Soup recipe-->
+
+<!--Rice recipe-->
+<section id="latest_recipe">
+    <div class="latest_recipie_text">
+        <h3>Rice Recipies</h3>
+        <a href="/categories/RICE">View more</a>
+   </div>
+<div class="latest_recipe">
+   <%if(rice.length > 0){%>
+    <%rice.forEach((recipe)=>{%>
+   <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+    <div class="latest_recipe_img">
+        <img src="imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+    </div>
+    <div class="latest_recipe_name"><%=recipe.name%></div>
+ </a>
+   <%})%>
+  <%}else{%>
+    <p>No recipes</p>
+ <%}%>
+  </div>
+</section>
+<!--Rice recipe-->
+
+<!--beans recipe-->
+<section id="latest_recipe">
+    <div class="latest_recipie_text">
+        <h3>Beans Recipies</h3>
+        <a href="/categories/BEANS">View more</a>
+   </div>
+<div class="latest_recipe">
+   <%if(beans.length > 0){%>
+    <%beans.forEach((recipe)=>{%>
+   <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+    <div class="latest_recipe_img">
+        <img src="imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+    </div>
+    <div class="latest_recipe_name"><%=recipe.name%></div>
+ </a>
+   <%})%>
+  <%}else{%>
+    <p>No recipes</p>
+ <%}%>
+  </div>
+</section>
+<!--beans recipe-->
+
+
+<!--snacks recipe-->
+<section id="latest_recipe">
+    <div class="latest_recipie_text">
+        <h3>Snacks Recipies</h3>
+        <a href="/categories/SNACKS">View more</a>
+   </div>
+<div class="latest_recipe">
+   <%if(snacks.length > 0){%>
+    <%snacks.forEach((recipe)=>{%>
+   <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+    <div class="latest_recipe_img">
+        <img src="imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+    </div>
+    <div class="latest_recipe_name"><%=recipe.name%></div>
+ </a>
+   <%})%>
+  <%}else{%>
+    <p>No recipes</p>
+ <%}%>
+  </div>
+</section>
+<!--snacks recipe-->
+
+
+<!--porridge recipe-->
+<section id="latest_recipe">
+  <div class="latest_recipie_text">
+      <h3>Porridge Recipies</h3>
+      <a href="/categories/PORRIDGE">View more</a>
+ </div>
+<div class="latest_recipe">
+ <%if(porridge.length > 0){%>
+  <%porridge.forEach((recipe)=>{%>
+ <a href="/recipe/<%=recipe._id%>" class="latest_recipe_link">
+  <div class="latest_recipe_img">
+      <img src="imgs_recipe/<%=recipe.image%>" alt="<%=recipe.name%>">
+  </div>
+  <div class="latest_recipe_name"><%=recipe.name%></div>
+</a>
+ <%})%>
+<%}else{%>
+  <p>No recipes</p>
+<%}%>
+</div>
+</section>
+<!--porridge recipe-->
+
+
+<!--New recipe Section-->
+     <section id="add_new_recipe">
+          <div class="add_new_recipe">
+              <h1>ADD A NEW RECIPIE</h1>
+              <p>Add a new Nigerian recipe and share love</p>
+               <a href="/submit-recipe"><button>New Recipie</button></a>
+          </div>
+     </section>
+<!--New recipe Section-->
